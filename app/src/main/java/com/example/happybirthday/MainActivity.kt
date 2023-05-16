@@ -1,6 +1,7 @@
 package com.example.happybirthday
 
 import android.os.Bundle
+import androidx.compose.ui.unit.sp
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
@@ -36,17 +37,18 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun GreetingText(message: String,from: String, modifier: Modifier = Modifier){
+fun GreetingText(message: String, String:from = "Emma", modifier: Modifier = Modifier) {
     Text(text = message)
-    Text(text = from
+
+    Text(
+        text = from
+        fontSize = 36.sp
     )
-    fontSize = 100.sp
-    lineHeight = 116.sp
 }
-@Preview(showBackground = true)//The annotation has a parameter
+@Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun GreetingPreview(  ) {
     HappyBirthdayTheme {
-        GreetingText(message = "Happy birthday Sam!")
+        GreetingText(message = "Happy birthday Murira!")
     }
 }
